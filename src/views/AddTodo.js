@@ -4,7 +4,8 @@ import { withRouter } from 'react-router-dom';
 class AddTodo extends Component {
     state = {
         title: "",
-        text: ""
+        text: "",
+        importance: "Low",
     };
 
 handleSubmit = async e  => {
@@ -12,7 +13,8 @@ handleSubmit = async e  => {
     await this.props.onAdd(this.state);
     this.setState({
         title: '',
-        text: ''
+        text: '',
+        importance: "Low"
     });
     this.props.history.push('/');
 };
@@ -25,7 +27,7 @@ handleChange = e => {
 }
 
 render () {
-    const { title, text } = this.state;
+    const { title, text, importance} = this.state;
     return (
         <form onSubmit={this.handleSubmit} >
             <input 
@@ -44,8 +46,17 @@ render () {
                 placeholder="Text"
                 onChange={this.handleChange} 
             />
+
+            <div class="form-group">
+            <select class="form-control mb-2" id="exampleFormControlSelect1" name="importance" value={importance} onChange={this.handleChange}>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+            <option value="Urgent">Urgent</option>
+            </select>
+ </div>
         
-            <button type="submit" className="btn btn-outlin-success" disabled={!title}>
+            <button type="submit" className="btn btn-outline-success" disabled={!title}>
                 Ulozit
             </button>
         </form>

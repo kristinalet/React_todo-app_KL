@@ -7,6 +7,10 @@ import * as serviceWorker from './serviceWorker';
 
 import './assets/style.css';
 
+import 'jquery/dist/jquery.min';
+import 'popper.js/dist/popper.min';
+import 'bootstrap/dist/js/bootstrap.min';
+
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

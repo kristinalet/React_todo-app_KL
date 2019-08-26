@@ -26,7 +26,54 @@
 #checkButton {
     position: absolute;
     margin: 5px; 
-    bottom: 5px;
+    bottom: 50px;
     right: -7px;
 }
+
+.LowStatus {
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 1rem;
+    margin-right: 5px;
+    background: green;
+    margin-bottom: -2px;
+  }
+
+  .MediumStatus {
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 1rem;
+    margin-right: 5px;
+    background: orange;
+    margin-bottom: -2px;
+  }
+  
+  .HighStatus {
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 1rem;
+    margin-right: 5px;
+    background: red;
+    margin-bottom: -2px;
+  }
+  
+  .UrgentStatus {
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 1rem;
+    margin-right: 5px;
+    background: rgb(112, 5, 5);
+    margin-bottom: -2px;
+  }
+
+  .checkBoxes {
+      margin-right: 30px;
+      padding-bottom: 40px;
+  }
+
+
 

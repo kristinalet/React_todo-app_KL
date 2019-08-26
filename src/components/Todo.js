@@ -27,7 +27,7 @@ class Todo extends Component {
   };
  
   render() {
-    const { createdAt, title, finished } = this.props.todo;
+    const { createdAt, title, finished, importance } = this.props.todo;
     let classes = 'card';
     if (finished) classes += ' border-success';
 
@@ -49,8 +49,15 @@ class Todo extends Component {
             {this.renderText()}
             <TodoButtons todo={this.props.todo} onFinish={this.handleFinish} onRemove={this.handleRemove} />
           </div>
+          <div className="card-footer text-muted">
+          {(importance === "Low") ? <div className="LowStatus"></div> : null}
+          {(importance === "Medium") ? <div className="MediumStatus"></div> : null}
+          {(importance === "High") ? <div className="HighStatus"></div> : null}
+          {(importance === "Urgent") ? <div className="UrgentStatus"></div> : null}
+          {importance}
+          </div>
+          </div>
         </div>
-      </div>
     );
   }
 }
